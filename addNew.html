@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>New User</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="panel">
+	<form name="newUserForm" method="get" onsubmit="addNewUser()">
+		<label>Name: </label><input type="text" name="username" id="user-name">
+		<br><br>
+		<label>Age: </label><input type="number" name="userage" id="user-age">
+		<br><br>
+		<label>Library card:</label><input type="text" name="librarycard" id="library-card" readonly="readonly"> 
+		<input type="submit" name="submit">
+
+	</form>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
