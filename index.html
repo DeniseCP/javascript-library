@@ -24,11 +24,10 @@
 
 	  <div>
 	    <button id="find">Search</button>
-	    <button id="clear">Clear search</button>
+	    <button id="clear">Clear</button>
 	  </div>
-	  <div id="renderBookList"></div>
+	  <div id="renderBookList"></div>  
 	  
-	  <script src="cake.js"></script>
   </div>
 
   <div class="panel" id="user-panel">
@@ -36,18 +35,26 @@
   		<h3 class="tab-title">User</h3>
   	</header>
   	<div>
-  		<button id="btnAdd" onclick="openInaNewtab('addNew.html')"> Add New User</button>
+  		<button id="btnAdd" onclick="showAddForm()"> Add New User</button>
+        
+        <div class="hidden" id="addForm">
+        <form name="newUserForm" method="get" onsubmit="return false">
+            <label>Name: </label><input type="text" name="username" id="user-name">
+            <br><br>
+            <label>Age: </label><input type="number" name="userage" id="user-age">
+            <br><br>
+            <input type="submit" name="submit" onclick="addNewUser()">
+
+        </form>
+            <div id="message"></div>
+    </div>
+    
   	</div>
   	<div>
-  		<button id="btnList"> List Users</button>
+  		<button id="btnList" onclick="listUsers()"> List Users</button>
+        <div id="userlist"></div>
   	</div>
-  	<script src="main.js"></script>
   </div>
-
-  <div class="panel" id="borrow-book-panel">
-  	<header>
-  		<h3 class="tab-title">Borrow a Book</h3>
-  	</header>
-  </div>
+    <script src="cake.js"></script>
 </body>
 </html>

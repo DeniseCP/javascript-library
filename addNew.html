@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>New User</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
+<title>New User</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-<div class="panel">
-	<form name="newUserForm" method="get" onsubmit="addNewUser()">
-		<label>Name: </label><input type="text" name="username" id="user-name">
-		<br><br>
-		<label>Age: </label><input type="number" name="userage" id="user-age">
-		<br><br>
-		<label>Library card:</label><input type="text" name="librarycard" id="library-card" readonly="readonly"> 
-		<input type="submit" name="submit">
+    <div class="panel">
+        <h1>Add New User</h1>
+        <form name="newUserForm" method="get" onsubmit="return false">
+            <label>Name: </label><input type="text" name="username" id="user-name">
+            <br><br>
+            <label>Age: </label><input type="number" name="userage" id="user-age">
+            <br><br>
+            <label>Library card:</label><input type="text" name="librarycard" id="library-card" readonly="readonly"> 
+            <input type="submit" name="submit" onclick="addNewUser()">
 
-	</form>
-</div>
+        </form>
+    </div>
+    <div id="message"></div>
+    <div>
+        <button onclick="openInaNewtab('index.html')">Return</button>
+    </div>
 <script src="main.js"></script>
 </body>
 </html>
